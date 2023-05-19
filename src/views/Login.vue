@@ -30,6 +30,9 @@
             <div>
                 <el-button type="primary" style="width:100%;margin-bottom:20px;" @click.native.prevent="handleLogin">登录</el-button>
             </div>
+            <div>
+                <el-button type="primary" style="width:100%;margin-bottom:20px;" @click="goMain">去主页</el-button>
+            </div>
             <div class="tips">
                 <span style="margin-right:20px;">如果您还没有账号请先 <span style="color:#409EFF;cursor:pointer" @click="register">注册</span></span>
             </div>
@@ -86,6 +89,9 @@ export default {
         }
     },
     methods: {
+        goMain(){
+            this.$router.push("/caption")
+        },
         showPwd() {
             if (this.passwordType === 'password') {
                 this.passwordType = ''
@@ -118,8 +124,8 @@ export default {
         },
         // 注册业务
         register() {
-            console.log('123')
-            this.$router.push("/register")
+
+            this.$router.push("/registerform")
         }
     }
 

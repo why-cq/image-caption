@@ -1,26 +1,45 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Login from '../views/Login.vue'
-import Register from '../views/Register.vue'
+
+import UserLists from '../components/UserLists.vue'
 import Caption from "@/views/Caption.vue";
+import RegisterForm from "@/views/RegisterForm.vue";
+import Test from "@/components/ImageCaption.vue";
+import MainBody from "@/components/MainBody.vue";
+import Login from "@/views/Login.vue";
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
+    path: '/login',
     name: 'Login',
     component: Login
   },
   {
-    path: '/register',
-    name: 'Register',
-    component: Register
+    path: '/mainbody',
+    name: 'MainBody',
+    component: MainBody
   },
   {
-    path: '/caption',
+    path: '/userlists',
+    name: 'UserLists',
+    component: UserLists
+  },
+  {
+    path: '/',
     name: 'Caption',
     component: Caption
+  },
+  {
+    path: '/registerform',
+    name: 'RegisterForm',
+    component: RegisterForm
+  },
+  {
+    path: '/test',
+    name: 'Test',
+    component: Test
   },
 
   // {
